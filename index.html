@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>检查用户名</title>
+    <style>
+        /* 使用CSS来设置整个页面的字体样式 */
+        body, input[type="text"], input[type="submit"] {
+            font-size: 60px; /* 设置页面的字体大小为20像素 */
+        }
+    </style>
     <script>
         // 黑名单列表
         var blacklist = ["李一", "李二", "李三"];
@@ -22,9 +28,8 @@
     </script>
 </head>
 <body>
-<b>检查客户名</b>
 <form onsubmit="return handleSubmit()">
-    <label for="username">客户名：</label>
+    <label for="username" >检查客户名</label>
     <input type="text" id="username" name="username">
     <br>
     <input type="submit" value="提交">
