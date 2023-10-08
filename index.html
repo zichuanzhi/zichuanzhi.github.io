@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>检查用户名</title>
+    <script>
+        // 黑名单列表
+        var blacklist = ["李一", "李二", "李三"];
+        // 表单提交后的处理函数
+        function handleSubmit() {
+            var username = document.getElementById("username").value;
+            // 检查名是否在黑名单中
+            if (blacklist.includes(username)) {
+                alert("您的客名在黑名单中，无法提交！");
+                return false;
+            } else {
+                // 跳转到指定链接
+                window.location.href = "http://jinhuiguolv.mikecrm.com/A7nJ2vC";
+                return false; // 阻止表单的默认提交行为
+            }
+        }
+    </script>
+</head>
+<body>
+<b>检查客户名</b>
+<form onsubmit="return handleSubmit()">
+    <label for="username">客户名：</label>
+    <input type="text" id="username" name="username">
+    <br>
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>
