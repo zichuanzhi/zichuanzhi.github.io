@@ -122,7 +122,10 @@
         function handleSubmit() {
             var username = document.getElementById("username").value;
             // 检查名是否在黑名单中
-            if (blacklist.includes(username)) {
+            if(username.trim()===""){
+                alert("空值不可以提交哦");
+                return false;
+            } else if (blacklist.includes(username)) {
                 alert("您的客名在黑名单中，无法提交！");
                 return false;
             } else {
