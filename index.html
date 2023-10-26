@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <title>检查用户名</title>
     <style>
-        /* 使用CSS来设置整个页面的字体样式 */
+         /*使用CSS来设置整个页面的字体样式 */
         body, input[type="text"], input[type="submit"] {
-            font-size: 60px; /* 设置页面的字体大小为20像素 */
+            font-size: 30px; /* 设置页面的字体大小为20像素 */
         }
+        table{
+            width: 100%;
+            height: 100px;
+           display: contents;
+        }
+         table tr td:hover{
+             text-align: left;
+             font-style: oblique;
+             color: #072499;
+         }
     </style>
     <script>
         // 黑名单列表
@@ -189,7 +199,7 @@
                 alert("空值不可以提交哦");
                 return false;
             } else if (blacklist.includes(username)) {
-                alert("您的客名在黑名单中，无法提交！");
+                alert("您的客户名在黑名单中，无法提交！");
                 return false;
             } else {
                 // 跳转到指定链接
@@ -201,10 +211,24 @@
 </head>
 <body>
 <form onsubmit="return handleSubmit()">
-    <label for="username" >检查客户名</label>
-    <input type="text" id="username" name="username">
-    <br>
-    <input type="submit" value="提交">
+ <table>
+     <tr>
+         <td>检查客户名：</td>
+         <td>
+             <label for="username" ></label>
+             <input type="text" id="username" name="username">
+             <br>
+         </td>
+     </tr>
+     <tr>
+         <td>
+             提交结果：
+         </td>
+         <td>
+             <input type="submit" value="提交">
+         </td>
+     </tr>
+ </table>
 </form>
 </body>
 </html>
